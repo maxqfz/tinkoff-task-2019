@@ -1,4 +1,4 @@
-package ru.tinkoff.task.customerservice;
+package ru.tinkoff.task.accountservice;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -6,8 +6,8 @@ import org.springframework.context.annotation.PropertySource;
 
 @SpringBootApplication
 @PropertySource("classpath:application.yml")
-public class CustomerServiceApplication {
+public class AccountServiceApplication {
     public static void main(String[] args) {
-        SpringApplication.run(CustomerServiceApplication.class, args);
+        SpringApplication.run(AccountServiceApplication.class, args);
     }
 }
