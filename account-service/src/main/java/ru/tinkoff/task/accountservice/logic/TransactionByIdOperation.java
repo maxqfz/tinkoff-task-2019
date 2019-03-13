@@ -3,6 +3,7 @@ package ru.tinkoff.task.accountservice.logic;
 import lombok.RequiredArgsConstructor;
 import org.springframework.boot.logging.LogLevel;
 import org.springframework.stereotype.Component;
+import org.springframework.transaction.annotation.Transactional;
 import ru.tinkoff.eclair.annotation.Log;
 import ru.tinkoff.task.accountservice.builder.RestAccountBuilder;
 import ru.tinkoff.task.accountservice.configuration.AccountRepository;
@@ -22,6 +23,7 @@ public class TransactionByIdOperation {
     private final RestAccountBuilder restAccountBuilder;
 
     @Log(LogLevel.INFO)
+    @Transactional
     public RestAccount process(long id, RestTransaction restTransaction) {
         return ExceptionWrapper.wrap(() -> innerProcess(id, restTransaction));
     }
