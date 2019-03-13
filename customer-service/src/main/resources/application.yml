@@ -1,0 +1,16 @@
+#### SPRING SERVER PORT HERE ####
+server.port: 8001
+### JPA CONFIG ###
+spring.jpa:
+  database: POSTGRESQL
+  generate-ddl: true
+  hibernate.ddl-auto: update
+  properties.hibernate.jdbc.lob.non_contextual_creation: true
+  open-in-view: false
+  show-sql: true
+#### FILL IN RIGHT DATABASE CREDENTIALS BELOW ####
+spring.datasource:
+  platform: postgres
+  url: jdbc:postgresql://localhost:5432/customerservice
+  username: postgres
+  password: 123456
