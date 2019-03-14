@@ -12,9 +12,9 @@ public class RestCustomerBuilder {
         restCustomer.setFirstName(dbCustomer.getFirstName());
         restCustomer.setLastName(dbCustomer.getLastName());
         restCustomer.setEmail(dbCustomer.getEmail());
-        if (restCustomer.getPhone() != null)
+        if (dbCustomer.getPhone() != null)
             restCustomer.setPhone(dbCustomer.getPhone().toString());
-        if (restCustomer.getBirthDate() != null)
+        if (dbCustomer.getBirthDate() != null)
             restCustomer.setBirthDate(dbCustomer.getBirthDate().toString());
         return restCustomer;
     }

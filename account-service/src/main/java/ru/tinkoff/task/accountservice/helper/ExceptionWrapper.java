@@ -2,7 +2,7 @@ package ru.tinkoff.task.accountservice.helper;
 
 import org.springframework.dao.DataAccessException;
 import ru.tinkoff.task.accountservice.error.AccountNotFoundException;
-import ru.tinkoff.task.accountservice.error.NoClientSpecifiedException;
+import ru.tinkoff.task.accountservice.error.NoCustomerSpecifiedException;
 import ru.tinkoff.task.accountservice.error.NotEnoughMoneyException;
 import ru.tinkoff.task.accountservice.error.SomeOtherUnforeseenException;
 
@@ -13,7 +13,7 @@ public class ExceptionWrapper {
         try {
             return callable.call();
         } catch (AccountNotFoundException |
-                NoClientSpecifiedException |
+                NoCustomerSpecifiedException |
                 NotEnoughMoneyException e) {
             throw e;
         } catch (DataAccessException e) {

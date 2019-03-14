@@ -10,6 +10,6 @@ import java.math.BigDecimal;
 public class RestAccount {
     private long id;
     private String number;
-    private long clientId;
+    private long customerId;
     private BigDecimal money;
 }

@@ -9,7 +9,7 @@ import ru.tinkoff.task.accountservice.builder.DbAccountBuilder;
 import ru.tinkoff.task.accountservice.builder.RestAccountBuilder;
 import ru.tinkoff.task.accountservice.configuration.AccountRepository;
 import ru.tinkoff.task.accountservice.dto.RestAccount;
-import ru.tinkoff.task.accountservice.error.NoClientSpecifiedException;
+import ru.tinkoff.task.accountservice.error.NoCustomerSpecifiedException;
 import ru.tinkoff.task.accountservice.helper.ExceptionWrapper;
 
 @Component
@@ -26,8 +26,8 @@ public class AddAccountOperation {
     }
 
     private RestAccount innerProcess(RestAccount restAccount) {
-        if (restAccount.getClientId() == 0)
-            throw new NoClientSpecifiedException();
+        if (restAccount.getCustomerId() == 0)
+            throw new NoCustomerSpecifiedException();
         return restAccountBuilder.build(
                 accountRepository.save(
                         dbAccountBuilder.build(restAccount)
