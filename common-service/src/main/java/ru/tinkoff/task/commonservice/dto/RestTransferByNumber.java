@@ -5,7 +5,7 @@ import lombok.Data;
 import java.math.BigDecimal;
 
 @Data
-public class RestTransfer {
+public class RestTransferByNumber {
     private String fromAccount;
     private String toAccount;
     private BigDecimal amount;

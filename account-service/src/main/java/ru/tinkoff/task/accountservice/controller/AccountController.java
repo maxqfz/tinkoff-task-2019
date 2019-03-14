@@ -47,14 +47,14 @@ public class AccountController {
         return getAccountsByCustomerOperation.process(customerId);
     }
 
-    @PutMapping("/transaction/by-id/{id}")
+    @PostMapping("/transaction/by-id/{id}")
     @Log(LogLevel.DEBUG)
     public RestAccount makeTransactionWithAccount(@PathVariable long id,
                                                   @RequestBody RestTransaction restTransaction) {
         return transactionByIdOperation.process(id, restTransaction);
     }
 
-    @PutMapping("/transaction/by-number/{number}")
+    @PostMapping("/transaction/by-number/{number}")
     @Log(LogLevel.DEBUG)
     public RestAccount withdrawAccountWithNumber(@PathVariable String number,
                                                  @RequestBody RestTransaction restTransaction) {
