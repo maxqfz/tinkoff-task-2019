@@ -1,24 +1,22 @@
 package ru.tinkoff.task.customerservice.builder;
 
-import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
-import ru.tinkoff.task.customerservice.dto.RestCustomer;
 import ru.tinkoff.task.customerservice.dto.DbCustomer;
+import ru.tinkoff.task.customerservice.dto.RestCustomer;
 
 import java.math.BigInteger;
 import java.sql.Date;
 
 @Component
-@RequiredArgsConstructor
 public class DbCustomerBuilder {
     public DbCustomer build(RestCustomer restCustomer) {
         DbCustomer dbCustomer = new DbCustomer();
         dbCustomer.setFirstName(restCustomer.getFirstName());
         dbCustomer.setLastName(restCustomer.getLastName());
         dbCustomer.setEmail(restCustomer.getEmail());
-        if(restCustomer.getPhone() != null)
+        if (restCustomer.getPhone() != null)
             dbCustomer.setPhone(parsePhone(restCustomer.getPhone()));
-        if(restCustomer.getBirthDate() != null)
+        if (restCustomer.getBirthDate() != null)
             dbCustomer.setBirthDate(Date.valueOf(restCustomer.getBirthDate()));
         return dbCustomer;
     }

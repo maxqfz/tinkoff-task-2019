@@ -17,7 +17,7 @@ public class DbAccount {
     private String number;
 
     @Column(nullable = false)
-    private long clientId;
+    private long customerId;
 
     @Column(precision = 11, scale = 2, nullable = false)
     private BigDecimal money;

@@ -3,7 +3,6 @@ package ru.tinkoff.task.customerservice.controller;
 import lombok.RequiredArgsConstructor;
 import org.springframework.boot.logging.LogLevel;
 import org.springframework.http.HttpStatus;
-import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.*;
 import ru.tinkoff.eclair.annotation.Log;
 import ru.tinkoff.task.customerservice.dto.RestCustomer;

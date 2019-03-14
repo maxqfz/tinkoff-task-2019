@@ -10,7 +10,7 @@ public class RestAccountBuilder {
         RestAccount restAccount = new RestAccount();
         restAccount.setId(dbAccount.getId());
         restAccount.setNumber(dbAccount.getNumber());
-        restAccount.setClientId(dbAccount.getClientId());
+        restAccount.setClientId(dbAccount.getCustomerId());
         restAccount.setMoney(dbAccount.getMoney());
         return restAccount;
     }

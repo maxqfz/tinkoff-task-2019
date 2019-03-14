@@ -1,11 +1,10 @@
 package ru.tinkoff.task.customerservice.dto;
 
-import java.math.BigInteger;
-import java.sql.Date;
-
 import lombok.Data;
 
 import javax.persistence.*;
+import java.math.BigInteger;
+import java.sql.Date;
 
 @Data
 @Entity
@@ -17,7 +16,7 @@ public class DbCustomer {
     private String firstName;
     private String lastName;
     private String email;
-    @Column(precision=11)
+    @Column(precision = 11)
     private BigInteger phone;
     private Date birthDate;
 }

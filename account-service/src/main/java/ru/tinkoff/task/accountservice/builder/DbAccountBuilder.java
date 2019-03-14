@@ -16,7 +16,7 @@ public class DbAccountBuilder {
     public DbAccount build(RestAccount restAccount) {
         DbAccount dbAccount = new DbAccount();
         dbAccount.setNumber(accountNumberGenerator.generate());
-        dbAccount.setClientId(restAccount.getClientId());
+        dbAccount.setCustomerId(restAccount.getClientId());
         dbAccount.setMoney(new BigDecimal(0));
         return dbAccount;
     }

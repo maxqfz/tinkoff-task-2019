@@ -9,12 +9,15 @@ import ru.tinkoff.task.accountservice.dto.RestAccount;
 import ru.tinkoff.task.accountservice.dto.RestTransaction;
 import ru.tinkoff.task.accountservice.logic.*;
 
+import java.util.List;
+
 @RestController
 @RequiredArgsConstructor
 public class AccountController {
     private final AddAccountOperation addAccountOperation;
     private final DeleteAccountOperation deleteAccountOperation;
     private final GetAccountOperation getAccountOperation;
+    private final GetAccountsByCustomerOperation getAccountsByCustomerOperation;
     private final TransactionByIdOperation transactionByIdOperation;
     private final TransactionByNumberOperation transactionByNumberOperation;
 
@@ -36,6 +39,12 @@ public class AccountController {
     @Log(LogLevel.DEBUG)
     public RestAccount getAccount(@PathVariable long id) {
         return getAccountOperation.process(id);
+    }
+
+    @GetMapping("/customer/{customerId}")
+    @Log(LogLevel.DEBUG)
+    public List<RestAccount> getAccountsByCustomer(@PathVariable long customerId) {
+        return getAccountsByCustomerOperation.process(customerId);
     }
 
     @PutMapping("/transaction/by-id/{id}")

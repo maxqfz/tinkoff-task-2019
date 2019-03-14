@@ -39,7 +39,7 @@ public class TransactionByIdOperation {
                 break;
             case WITHDRAW:
                 BigDecimal newMoney = account.getMoney().subtract(restTransaction.getAmount());
-                if(newMoney.compareTo(BigDecimal.ZERO) < 0)
+                if (newMoney.compareTo(BigDecimal.ZERO) < 0)
                     throw new NotEnoughMoneyException();
                 account.setMoney(newMoney);
         }

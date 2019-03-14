@@ -7,4 +7,6 @@ import ru.tinkoff.task.accountservice.dto.DbAccount;
 
 public interface AccountRepository extends JpaRepository<DbAccount, Long> {
     Page<DbAccount> findByNumber(String number, Pageable pageRequest);
+
+    Page<DbAccount> findByCustomerId(long customerId, Pageable pageRequest);
 }

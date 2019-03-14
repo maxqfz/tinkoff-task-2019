@@ -7,9 +7,9 @@ import org.springframework.transaction.annotation.Transactional;
 import ru.tinkoff.eclair.annotation.Log;
 import ru.tinkoff.task.customerservice.builder.DbCustomerBuilder;
 import ru.tinkoff.task.customerservice.builder.RestCustomerBuilder;
+import ru.tinkoff.task.customerservice.configuration.CustomerRepository;
 import ru.tinkoff.task.customerservice.dto.RestCustomer;
 import ru.tinkoff.task.customerservice.helper.ExceptionWrapper;
-import ru.tinkoff.task.customerservice.configuration.CustomerRepository;
 
 @Component
 @RequiredArgsConstructor

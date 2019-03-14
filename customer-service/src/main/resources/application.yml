@@ -1,6 +1,6 @@
 #### SPRING SERVER PORT HERE ####
 server.port: 8001
-### JPA CONFIG ###
+##№# JPA CONFIG ###№
 spring.jpa:
   database: POSTGRESQL
   generate-ddl: true

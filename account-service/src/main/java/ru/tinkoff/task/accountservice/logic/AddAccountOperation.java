@@ -7,10 +7,10 @@ import org.springframework.transaction.annotation.Transactional;
 import ru.tinkoff.eclair.annotation.Log;
 import ru.tinkoff.task.accountservice.builder.DbAccountBuilder;
 import ru.tinkoff.task.accountservice.builder.RestAccountBuilder;
+import ru.tinkoff.task.accountservice.configuration.AccountRepository;
 import ru.tinkoff.task.accountservice.dto.RestAccount;
 import ru.tinkoff.task.accountservice.error.NoClientSpecifiedException;
 import ru.tinkoff.task.accountservice.helper.ExceptionWrapper;
-import ru.tinkoff.task.accountservice.configuration.AccountRepository;
 
 @Component
 @RequiredArgsConstructor
@@ -26,7 +26,7 @@ public class AddAccountOperation {
     }
 
     private RestAccount innerProcess(RestAccount restAccount) {
-        if(restAccount.getClientId() == 0)
+        if (restAccount.getClientId() == 0)
             throw new NoClientSpecifiedException();
         return restAccountBuilder.build(
                 accountRepository.save(
