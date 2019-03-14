@@ -1,0 +1,5 @@
+#### REST API CLIENT CONFIGURATION ####
+rest.api.customerservice.url: http://127.0.0.1:8001/
+rest.api.accountservice.url: http://127.0.0.1:8002/
+#### SPRING SERVER PORT HERE ####
+server.port: 8003
