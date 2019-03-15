@@ -4,7 +4,6 @@ import org.junit.jupiter.api.Test;
 import ru.tinkoff.task.customerservice.dto.DbCustomer;
 import ru.tinkoff.task.customerservice.dto.RestCustomer;
 
-import java.math.BigInteger;
 import java.sql.Date;
 import java.time.LocalDate;
 
