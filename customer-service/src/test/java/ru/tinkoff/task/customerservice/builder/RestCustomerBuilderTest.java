@@ -14,7 +14,7 @@ public class RestCustomerBuilderTest {
     private final RestCustomerBuilder restCustomerBuilder = new RestCustomerBuilder();
 
     @Test
-    public void build() {
+    public void builderTest() {
         //given
         DbCustomer dbCustomer = givenDbCustomer();
         //when
